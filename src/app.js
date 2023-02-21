@@ -23,17 +23,25 @@ window.onload = function() {
   ];
   let palo = ["♦", "♥", "♠", "♣"];
 
-  let selectpalo = palo[Math.floor(Math.random() * (palo.lenght - 1))];
-  let selectnumber = number[Math.floor(Math.random() * (number.length - 1))];
+  let selectpalo = palo[Math.floor(Math.random() * palo.length)];
+  let selectnumber = number[Math.floor(Math.random() * number.length)];
 
-  console.log(selectpalo + selectnumber);
+  console.log(selectnumber + selectpalo);
 
-  let cambiopalo = document.querySelector(".palo sup");
-  cambiopalo.innerHTML = selectpalo;
+  let sup = document.querySelector(".palo-sup");
+  sup.innerHTML = selectpalo;
 
-  let cambiopalo2 = document.querySelector(".palo inf");
-  cambiopalo2.innerHTML = selectpalo;
+  let center = document.querySelector(".number");
+  center.innerHTML = selectnumber;
 
-  let cambionumber = document.querySelector(".number");
-  cambionumber.innerHTML = selectnumber;
+  let inf = document.querySelector(".palo-inf");
+  inf.innerHTML = selectpalo;
+
+  if (selectpalo == "♦" || selectpalo == "♥") {
+    document.querySelector(".palo-sup").style.color = "red";
+    document.querySelector(".palo-inf").style.color = "red";
+  } else {
+    document.querySelector(".palo-sup").style.color = "black";
+    document.querySelector(".palo-inf").style.color = "black";
+  }
 };

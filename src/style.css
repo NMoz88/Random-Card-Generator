@@ -1,1 +1,32 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: green;
+  box-sizing: border-box;
+}
+.card {
+  text-align: center;
+  display: inline-block;
+  background-image: url("https://isenacode.com/wp-content/uploads/2020/09/wallpaper-iphone-w39-2-scaled.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: auto;
+  height: 300px;
+  width: 250px;
+  padding: 20px;
+  padding-top: 180px;
+  font-size: 80px;
+  border-radius: 10px;
+  border: 1px solid black;
+  position: relative;
+}
+.palo-sup {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  font-size: 80px;
+}
+.palo-inf {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  font-size: 80px;
+}
